@@ -6,7 +6,7 @@ html {
 }
 
 .main-content {
-  position: relative;
+  position: absolute;
   top: 5.3125rem; /* To offset for fixed header. */
 }
 
@@ -39,6 +39,7 @@ html {
 header {
   position: fixed;
   width: 100%;
+  z-index: 100;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
 }
@@ -107,7 +108,7 @@ header .mobile {
     padding: 0;
   }
 
-  header .mobile .button {
+  nav li .button {
     padding: 0.1875rem 0.5rem;
     background-color: #9dc20b;
     line-height: 1.6;
@@ -281,7 +282,7 @@ header .mobile {
 
   .feature {
     margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+    padding: 1.25rem 1rem 1rem 1rem;
   }
 }
 
@@ -356,11 +357,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -369,12 +370,12 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem 0.625rem;
   }
 
@@ -383,7 +384,7 @@ header .mobile {
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
